@@ -13,7 +13,7 @@ class Birdsound < ActiveRecord::Base
         ATTR.each do |attr|
           birdsound.send("#{attr}=", arr.shift)
         end
-        birdsound.save!
+        #birdsound.save
       end
       birdsound
     end

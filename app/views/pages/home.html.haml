@@ -1,3 +1,4 @@
-%ul
-  - @sounds.each do |s|
-    %li= s.english
+- @sounds.each do |s|
+  %div.ui360.ui360-vis
+    =link_to s.english, s.mp3
+

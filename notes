@@ -1,0 +1,9 @@
+Wikimedia Commons image search API
+
+http://wikimedia.7.n6.nabble.com/can-I-use-the-API-to-search-for-images-in-commons-wikimedia-org-td2549464.html
+
+https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=%22chartres+cathedral%22&gsrlimit=20&gsroffset=20&prop=imageinfo&iiprop=url
+
+x=HTTParty.get('https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=%22chartres+cathedral%22&gsrlimit=20&gsroffset=20&prop=imageinfo&iiprop=url&format=xml', :headers => { 'User-Agent' => 'Birdsound (arne.brasseur@gmail.com)' })
+
+ x.parsed_response['api']['query']['pages']['page'].map {|p| p['imageinfo']['ii']['url']}
