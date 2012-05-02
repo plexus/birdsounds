@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  genus: MyString
+  species: MyString
+  english: MyString
+  subspecies: MyString
+  recordist: MyString
+  country: MyString
+  location: MyString
+  latitude: MyString
+  longitude: MyString
+  songtype: MyString
+
+two:
+  genus: MyString
+  species: MyString
+  english: MyString
+  subspecies: MyString
+  recordist: MyString
+  country: MyString
+  location: MyString
+  latitude: MyString
+  longitude: MyString
+  songtype: MyString

@@ -1,0 +1,1 @@
+//= require soundmanager/soundmanager2
