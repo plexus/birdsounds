@@ -1,4 +1,6 @@
 XenoRails::Application.routes.draw do
+  resources :bird_images
+
   resources :birdsounds do
     get 'random/:count', :action => 'random', :on => :collection
   end

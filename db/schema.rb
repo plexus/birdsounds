@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120501095006) do
+ActiveRecord::Schema.define(:version => 20120506205153) do
+
+  create_table "bird_images", :force => true do |t|
+    t.string   "latin_name"
+    t.string   "url"
+    t.string   "filename"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "birdsounds", :force => true do |t|
     t.string   "genus"

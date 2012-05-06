@@ -1,7 +1,10 @@
 #one_page
-  - 12.times do |i|
-    %div{:class => "birdsound-#{i}"}
+  - 16.times do |i|
+    %div{:class => "birdsound" , :id => "birdsound-#{i}"}
 
 %script#birdsound{:type => "text/html"}
-  %div.ui360.ui360-vis
+  %div
+    = '{{ latin }}'
+
+  -# %div.ui360.ui360-vis
     =link_to '{{ english }}', '{{ mp3 }}'

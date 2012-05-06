@@ -5,6 +5,10 @@ class Birdsound < ActiveRecord::Base
 
   attr_accessible ATTR
 
+  def latin
+    genus + ' ' + species
+  end
+
   class << self
     def from_csv(arr)
       id = arr.shift.to_i

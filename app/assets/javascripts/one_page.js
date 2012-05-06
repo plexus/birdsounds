@@ -4,7 +4,7 @@ var Collections = {}
 
 $(function(){
     Collections.Birdsounds = Backbone.Collection.extend({
-        url: '/birdsounds/random/12'
+        url: '/birdsounds/random/16'
     })
     var birdsoundCollection = new Collections.Birdsounds
     window.bsc = birdsoundCollection
@@ -27,7 +27,7 @@ $(function(){
         addOne: function(model) {
             //alert(model.get('english'))
             var num = birdsoundCollection.indexOf(model)
-            var view = new Views.Birdsound({model: model, el: $('.birdsound-'+num)})
+            var view = new Views.Birdsound({model: model, el: $('#birdsound-'+num)})
             view.render()
             //$('#one_page').append(view.render().el)
         },
@@ -36,5 +36,5 @@ $(function(){
         }
     })
 
-    var App = new Views.App
+  var App = new Views.App
 })
