@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require vendor
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/xeno_rails
 //= require_tree .
