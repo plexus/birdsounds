@@ -1,0 +1,17 @@
+%h1 Listing birdsounds
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @birdsounds.each do |birdsound|
+    %tr
+      %td= link_to 'Show', birdsound
+      %td= link_to 'Edit', edit_birdsound_path(birdsound)
+      %td= link_to 'Destroy', birdsound, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Birdsound', new_birdsound_path

@@ -1,6 +1,6 @@
 XenoRails::Application.routes.draw do
   resources :birdsounds do
-    get 'random', :on => :collection
+    get 'random/:count', :action => 'random', :on => :collection
   end
 
   # The priority is based upon order of creation:

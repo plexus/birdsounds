@@ -18,4 +18,5 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/xeno_rails
+//= require one_page
 //= require_tree .

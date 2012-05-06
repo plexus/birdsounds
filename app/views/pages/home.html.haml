@@ -1,4 +1,7 @@
-- @sounds.each do |s|
-  %div.ui360.ui360-vis
-    =link_to 's.english', s.mp3
+#one_page
+  - 12.times do |i|
+    %div{:class => "birdsound-#{i}"}
 
+%script#birdsound{:type => "text/html"}
+  %div.ui360.ui360-vis
+    =link_to '{{ english }}', '{{ mp3 }}'

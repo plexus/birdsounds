@@ -1,0 +1,10 @@
+= form_for @birdsound do |f|
+  -if @birdsound.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@birdsound.errors.count, "error")} prohibited this birdsound from being saved:"
+      %ul
+        - @birdsound.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

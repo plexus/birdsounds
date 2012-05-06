@@ -1,14 +1,24 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+
+# Change rails defaults
+gem 'rspec-rails'
+gem 'haml-rails'
+gem 'thin'
+
+# JS integration
 gem 'jquery-rails'
 gem 'rails-backbone'
-gem 'haml'
-gem 'httparty' #  HTTParty#get
-gem 'randumb'  #  ActiveRecord#random
-gem 'thin'
-gem 'activerecord-import'
+
+# Consume 3rd party services
 gem 'hpricot'
+gem 'httparty' #  HTTParty#get
+
+# Active record extensions
+gem 'randumb'  #  ActiveRecord#random
+gem 'activerecord-import'
+
 
 
 # Bundle edge Rails instead:
@@ -17,8 +27,8 @@ gem 'hpricot'
 group :development do
   gem 'sqlite3'
   gem 'wirble'
+  gem 'annotate', '~> 2.4.1.beta' 
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
