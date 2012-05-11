@@ -1,11 +1,24 @@
 .birdsound {
-  width: 10em;
-  height: 10em;
+  width: 12em;
+  height: 12em;
   margin: 10px;
   float: left;
   border: 1px solid black;
+  position: relative;
 }
 
 #birdsound-4, #birdsound-8, #birdsound-12 {
   clear: left;
+}
+
+.song-id {
+  display: none;
+}
+
+.slider {
+  height: 10em;
+  width: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

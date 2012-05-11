@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.ui.slider
 //= require jquery_ujs
 //= require vendor
 //= require underscore

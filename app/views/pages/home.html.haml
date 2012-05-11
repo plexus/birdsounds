@@ -3,8 +3,17 @@
     %div{:class => "birdsound" , :id => "birdsound-#{i}"}
 
 %script#birdsound{:type => "text/html"}
-  %div
-    = '{{ latin }}'
+  %div{:class => '{{ songtype }} {{ playing }}'}
+    = '{{ country }}'
+    %br
+    = '{{ genus }} {{ species }}'
+    %br
+    = '{{ songtype }}'
+    %span{:class => 'song-id'}
+      = 's{{ id }}'
+  %div.slider
+    
+
 
   -# %div.ui360.ui360-vis
     =link_to '{{ english }}', '{{ mp3 }}'
