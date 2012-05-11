@@ -18,6 +18,7 @@ class BirdImage < ActiveRecord::Base
       headers = {
         'User-Agent' => 'arne.brasseur@gmail.com'  
       }
+      #puts url % CGI.escape(latin)
       qry = HTTParty.get(url % CGI.escape(latin), :headers => headers)
       puts qry.body
       p qry['api']['query']
