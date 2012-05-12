@@ -20,13 +20,30 @@ class BirdImage < ActiveRecord::Base
       }
       #puts url % CGI.escape(latin)
       qry = HTTParty.get(url % CGI.escape(latin), :headers => headers)
-      puts qry.body
-      p qry['api']['query']
-      #qry['api']['query']['pages']['page'].map do |page|
-      #  p page
-      #end
+      page = qry['api']['query']['pages']['page'] rescue []
+      page.each do |pg|
+        imageinfo = pg['imageinfo']['ii'] rescue nil
+        if imageinfo
+          bi = self.new
+          bi.url = imageinfo['url']
+          bi.latin_name = latin
+          bi.save
+        end
+      end
       #File.open('/tmp/%d' % rand(1000), 'w') {|f| f << qr}
       #end
     end
   end
 end
+# == Schema Information
+#
+# Table name: bird_images
+#
+#  id         :integer         not null, primary key
+#  latin_name :string(255)
+#  url        :string(255)
+#  filename   :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
