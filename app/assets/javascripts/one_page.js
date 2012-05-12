@@ -50,7 +50,7 @@ $(function(){
                     return false
                 }
                 sound.setVolume(newVol)
-                console.log('--> '+newVol)
+                //console.log('--> '+newVol)
                 this.trigger('volume:changed')
                 self = this
                 setTimeout(function(){ self.fadeTo(target) }, 20)
@@ -80,6 +80,7 @@ $(function(){
                 max: 100,
                 value: volume,
                 slide: function( event, ui ) {
+                    console.log('sound_id --> '+ui.value)
                     soundManager.setVolume(sound_id, ui.value)
                 }
             })
