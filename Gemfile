@@ -21,8 +21,9 @@ gem 'activerecord-import'
 
 #infrastructure
 gem 'foreman'
-
-
+gem 'capistrano'
+gem 'rvm-capistrano'
+#gem 'rubber'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -40,7 +41,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 
