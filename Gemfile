@@ -25,6 +25,8 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 #gem 'rubber'
 
+gem 'pg'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -33,6 +35,8 @@ group :development do
   gem 'wirble'
   gem 'annotate', '~> 2.4.1.beta' 
 end
+
+  
 
 # Gems used only for assets and not required
 # in production environments by default.

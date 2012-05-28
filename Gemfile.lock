@@ -92,6 +92,7 @@ GEM
     net-ssh (2.5.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -179,6 +180,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   jquery-ui-rails
+  pg
   rails (= 3.2.3)
   rails-backbone
   randumb
