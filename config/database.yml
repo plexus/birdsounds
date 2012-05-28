@@ -21,5 +21,6 @@ test:
 production:
   adapter: postgresql
   database: birdsounds_production
-  username: myapp
-  password: password
+  username: birdsounds
+  password: birdsounds
+  host: 127.0.0.1
