@@ -14,10 +14,16 @@ namespace :db do
   desc "Import birdsounds from CSV"
   task :import => :environment do
     birdsounds = []
-    fix_utf8(IO.read(Rails.root.join('fileinfo/concat.csv'))).split("\n").each do |l|
-      birdsounds << Birdsound.from_csv(l.split(';'))
+    File.open('fileinfo/fixed.csv') do |f| 
+      f.lines.each do |l| #IO.read(Rails.root.join('fileinfo/concat.csv'))).split("\n").each do |l|
+        birdsounds << Birdsound.from_csv(l.split(';'))
+      end
     end
     Birdsound.import birdsounds
+  end
+
+  task :fix_import do
+    File.open('fileinfo/fixed.csv', 'w') {|f| f<< fix_utf8(IO.read(Rails.root.join('fileinfo/concat.csv'))) }
   end
 end
 
